@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.expertostrandil.com.ar/sitemap.xml
+
+# Bloquear rutas innecesarias
+Disallow: /admin/
+Disallow: /private/
