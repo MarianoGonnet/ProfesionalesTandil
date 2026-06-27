@@ -204,6 +204,62 @@ function toggleSidebar() {
   }
 })();
 
+// ── CARRUSEL AVISOS ──
+(function () {
+  const GAP   = 32;
+  const SPEED = 0.7;
+
+  function initAvisos() {
+    const track = document.getElementById('avisos-track');
+    if (!track) return;
+
+    const originals = Array.from(track.querySelectorAll('.aviso-slide'));
+    if (!originals.length) return;
+
+    // Clonar suficientes veces para llenar al menos 3 anchos de pantalla
+    const copies = Math.ceil((window.innerWidth * 3) / (originals.length * 232)) + 1;
+    for (let i = 0; i < copies; i++) {
+      originals.forEach(s => track.appendChild(s.cloneNode(true)));
+    }
+    track.style.transition = 'none';
+
+    let pos = 0, paused = false, originalWidth = 0;
+
+    function calcWidth() {
+      originalWidth = originals.reduce((sum, s) => sum + s.offsetWidth + GAP, 0);
+    }
+    function tick() {
+      if (!paused) {
+        pos += SPEED;
+        if (pos >= originalWidth) pos -= originalWidth;
+        track.style.transform = `translateX(-${pos}px)`;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    const wrap = track.parentElement;
+    wrap.addEventListener('mouseenter', () => { paused = true; });
+    wrap.addEventListener('mouseleave', () => { paused = false; });
+    wrap.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+    wrap.addEventListener('touchend',   () => { paused = false; }, { passive: true });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { calcWidth(); if (pos >= originalWidth) pos %= originalWidth; }, 150);
+    });
+
+    calcWidth();
+    requestAnimationFrame(tick);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAvisos);
+  } else {
+    initAvisos();
+  }
+})();
+
 // ── FADE-IN TARJETAS AL SCROLL ──
 (function () {
   function initFadeIn() {

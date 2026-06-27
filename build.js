@@ -9,6 +9,7 @@ const path = require('path');
 
 // ── Cargar datos ──────────────────────────────
 const profesionales = JSON.parse(fs.readFileSync('profesionales.json', 'utf8')).filter(p => p.activo !== false);
+const avisos        = JSON.parse(fs.readFileSync('avisos.json', 'utf8'));
 const OUT           = path.join(__dirname, 'dist');
 
 // Logo SVG inline — sin dependencia de archivo externo
@@ -33,6 +34,16 @@ if (fs.existsSync(FOTOS_SRC)) {
   if (!fs.existsSync(FOTOS_OUT)) fs.mkdirSync(FOTOS_OUT);
   fs.readdirSync(FOTOS_SRC).forEach(f => {
     if (f !== '.gitkeep') fs.copyFileSync(path.join(FOTOS_SRC, f), path.join(FOTOS_OUT, f));
+  });
+}
+
+// Copiar carpeta avisos/ a dist/avisos/
+const AVISOS_SRC = path.join(__dirname, 'avisos');
+const AVISOS_OUT = path.join(OUT, 'avisos');
+if (fs.existsSync(AVISOS_SRC)) {
+  if (!fs.existsSync(AVISOS_OUT)) fs.mkdirSync(AVISOS_OUT);
+  fs.readdirSync(AVISOS_SRC).forEach(f => {
+    if (f !== '.gitkeep') fs.copyFileSync(path.join(AVISOS_SRC, f), path.join(AVISOS_OUT, f));
   });
 }
 
@@ -67,6 +78,15 @@ function lucideIcon(name, size, color) {
   return `<i data-lucide="${name}" style="width:${size}px;height:${size}px;stroke:${color};stroke-width:1.5;fill:none;display:inline-flex;vertical-align:middle"></i>`;
 }
 
+function esc(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // ── SVG íconos ───────────────────────────────
 const WA_SVG = `<svg style="width:15px;height:15px;fill:currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.549 4.107 1.51 5.833L.057 23.25a.75.75 0 0 0 .916.916l5.453-1.456A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.713 9.713 0 0 1-4.95-1.354l-.355-.211-3.676.982.997-3.607-.232-.371A9.715 9.715 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>`;
 const IG_SVG = `<svg style="width:15px;height:15px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`;
@@ -85,7 +105,7 @@ function buildFicha(p) {
   const icon   = lucideIcon(RUBRO_ICON[p.rubro] || 'tool', 20, 'var(--dorado)');
   const tags   = p.especialidades.map(e => `<span class="tag">${e}</span>`).join('');
   const avatar = p.foto
-    ? `<img class="ficha-foto" src="fotos/${p.foto}" alt="${p.nombre}" loading="lazy">`
+    ? `<img class="ficha-foto" src="fotos/${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy">`
     : icon;
   return `
     <article class="ficha" itemscope itemtype="https://schema.org/LocalBusiness">
@@ -93,14 +113,13 @@ function buildFicha(p) {
         <div class="ficha-top">
           <div class="ficha-avatar${p.foto ? ' ficha-avatar--foto' : ''}">${avatar}</div>
           <div>
-            <div class="ficha-nombre" itemprop="name">${p.nombre}</div>
-            <div class="ficha-titulo">${p.titulo}</div>
+            <div class="ficha-nombre" itemprop="name">${esc(p.nombre)}</div>
+            <div class="ficha-titulo">${esc(p.titulo)}</div>
           </div>
         </div>
-        <p class="ficha-desc" itemprop="description">${p.descripcion}</p>
-        <div class="ficha-btns">
-          <a class="btn-wa" href="https://wa.me/549${p.tel}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank" title="WhatsApp ${p.nombre}">${WA_SVG} WhatsApp</a>
-          <a class="btn-ig" href="https://instagram.com/${p.instagram}" target="_blank" title="Instagram ${p.nombre}">${IG_SVG} Instagram</a>
+<div class="ficha-btns">
+          <a class="btn-wa" href="https://wa.me/549${esc(p.tel)}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank" rel="noopener noreferrer" title="WhatsApp ${esc(p.nombre)}">${WA_SVG} WhatsApp</a>
+          <a class="btn-ig" href="https://instagram.com/${esc(p.instagram)}" target="_blank" rel="noopener noreferrer" title="Instagram ${esc(p.nombre)}">${IG_SVG} Instagram</a>
         </div>
       </div>
     </article>`;
@@ -115,10 +134,26 @@ function buildCarrusel() {
       <div class="carrusel-icon">${icon}</div>
       <div class="carrusel-nombre">${p.nombre}</div>
       <div class="carrusel-rubro">${p.titulo}</div>
-      <div class="carrusel-esp">${p.especialidades.join(' · ')}</div>
-      <a class="carrusel-cta" href="https://wa.me/549${p.tel}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank">${WA_SVG} Escribir por WhatsApp</a>
+<a class="carrusel-cta" href="https://wa.me/549${esc(p.tel)}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank" rel="noopener noreferrer">${WA_SVG} Escribir por WhatsApp</a>
     </div>`;
   }).join('');
+}
+
+function buildAvisosCarrusel() {
+  if (!avisos.length) return '';
+  const slides = avisos.map(a => {
+    const contenido = a.imagen
+      ? `<img src="avisos/${esc(a.imagen)}" alt="${esc(a.nombre)}" class="aviso-img" loading="lazy">`
+      : `<span class="aviso-nombre">${esc(a.nombre)}</span>`;
+    return `<a class="aviso-slide" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer" title="${esc(a.nombre)}">${contenido}</a>`;
+  }).join('');
+  return `
+<div class="avisos-wrap">
+  <div class="avisos-label">Comercios y empresas de Tandil</div>
+  <div class="avisos-carrusel" id="avisos-carrusel">
+    <div class="avisos-track" id="avisos-track">${slides}</div>
+  </div>
+</div>`;
 }
 
 function buildSchemaItems(lista) {
@@ -207,7 +242,7 @@ function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main }) {
 <script type="application/ld+json">${schema}</script>
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">${h1hidden}</h1>
@@ -227,11 +262,13 @@ ${main}
   <div><h2>¿Sos profesional en Tandil?</h2><p>Sumá tu ficha y empezá a recibir consultas hoy mismo.</p></div>
   <button class="btn-cta" type="button" onclick="abrirModal()">Quiero aparecer</button>
 </div>
+${buildAvisosCarrusel()}
 <footer>
   <a href="index.html" class="footer-logo">${LOGO_SVG}</a>
   <p><strong>Profesionales Tandil</strong> · Guía de Profesionales · Tandil, Buenos Aires · © 2025</p>
   <div class="footer-links">${buildFooterLinks()}</div>
 </footer>
+<a class="wa-flotante" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">${WA_SVG}<span>Sumarte a la guía</span></a>
 <script src="main.js"></script>
 <script>lucide.createIcons();</script>
 ${buildModal()}

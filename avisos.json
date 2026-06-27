@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Tripodi Chapas",
+    "imagen": "tripodi-chapas.jpeg",
+    "url": "https://www.tripodichapas.com"
+  },
+  {
+    "nombre": "Anunciante 2",
+    "imagen": "",
+    "url": "https://www.ejemplo.com"
+  },
+  {
+    "nombre": "Anunciante 3",
+    "imagen": "",
+    "url": "https://www.ejemplo.com"
+  },
+  {
+    "nombre": "Anunciante 4",
+    "imagen": "",
+    "url": "https://www.ejemplo.com"
+  },
+  {
+    "nombre": "Anunciante 5",
+    "imagen": "",
+    "url": "https://www.ejemplo.com"
+  }
+]
