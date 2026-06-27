@@ -4,516 +4,835 @@
     "titulo": "Plomero matriculado",
     "rubro": "plomeria",
     "emoji": "🔧",
-    "especialidades": ["Instalaciones sanitarias", "Destapes", "Urgencias 24 hs"],
+    "especialidades": [
+      "Instalaciones sanitarias",
+      "Destapes",
+      "Urgencias 24 hs"
+    ],
     "descripcion": "Más de 15 años trabajando en Tandil y la zona serrana. Especializado en instalaciones sanitarias completas, destapes de cañerías y reparaciones de urgencia. Atiende domicilios, obras en construcción y edificios. Presupuesto sin cargo.",
     "tel": "2494100001",
     "instagram": "carlosmendezplomero",
-    "pagina": "plomeros-tandil"
+    "pagina": "plomeros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Gustavo Paredes",
     "titulo": "Plomero y gasista",
     "rubro": "plomeria",
     "emoji": "🔧",
-    "especialidades": ["Gas natural", "Termotanques", "Calefacción"],
+    "especialidades": [
+      "Gas natural",
+      "Termotanques",
+      "Calefacción"
+    ],
     "descripcion": "Gasista habilitado con más de 10 años de experiencia. Instalación y reparación de termotanques, calefones, estufas y calderas. Certificaciones de gas para inmuebles. Trabaja en toda la ciudad de Tandil.",
     "tel": "2494100002",
     "instagram": "gustavoparedes_plomero",
-    "pagina": "plomeros-tandil"
+    "pagina": "plomeros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Ramón Villalba",
     "titulo": "Plomero · Obras y reformas",
     "rubro": "plomeria",
     "emoji": "🔧",
-    "especialidades": ["Obras nuevas", "Reformas", "Desagües"],
+    "especialidades": [
+      "Obras nuevas",
+      "Reformas",
+      "Desagües"
+    ],
     "descripcion": "Especialista en plomería para construcciones nuevas y reformas integrales. Instalación de baños completos, cocinas y lavanderías. Trabaja con constructoras y particulares en Tandil hace 12 años.",
     "tel": "2494100003",
     "instagram": "ramonvillalba_obras",
-    "pagina": "plomeros-tandil"
+    "pagina": "plomeros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Martina Ríos",
     "titulo": "Electricista matriculada",
     "rubro": "electricidad",
     "emoji": "⚡",
-    "especialidades": ["Instalaciones domiciliarias", "Tableros", "Certificaciones"],
+    "especialidades": [
+      "Instalaciones domiciliarias",
+      "Tableros",
+      "Certificaciones"
+    ],
     "descripcion": "Electricista con matrícula habilitante y más de 8 años de experiencia. Instalaciones eléctricas completas, tableros, iluminación LED y certificaciones para inmuebles. Atiende emergencias.",
     "tel": "2494200001",
     "instagram": "martinarioselectrica",
-    "pagina": "electricistas-tandil"
+    "pagina": "electricistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Lucas Bernal",
     "titulo": "Electricista industrial",
     "rubro": "electricidad",
     "emoji": "⚡",
-    "especialidades": ["Industria", "Automatización", "Alta tensión"],
+    "especialidades": [
+      "Industria",
+      "Automatización",
+      "Alta tensión"
+    ],
     "descripcion": "Electricista especializado en instalaciones industriales y comerciales. Automatización, motores trifásicos y sistemas de iluminación eficiente. Más de 12 años en el rubro.",
     "tel": "2494200002",
     "instagram": "lucasbernal_electrica",
-    "pagina": "electricistas-tandil"
+    "pagina": "electricistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Pablo Ortega",
     "titulo": "Electricista · Smart Home",
     "rubro": "electricidad",
     "emoji": "⚡",
-    "especialidades": ["Domótica", "Alarmas", "CCTV", "Redes"],
+    "especialidades": [
+      "Domótica",
+      "Alarmas",
+      "CCTV",
+      "Redes"
+    ],
     "descripcion": "Electricista con especialización en tecnología aplicada al hogar. Alarmas, cámaras CCTV, redes de datos y domótica. Trabaja con clientes residenciales y comerciales en Tandil.",
     "tel": "2494200003",
     "instagram": "pabloortega_electro",
-    "pagina": "electricistas-tandil"
+    "pagina": "electricistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Jorge Castillo",
     "titulo": "Albañil · Acabados finos",
     "rubro": "albanil",
     "emoji": "🧱",
-    "especialidades": ["Revoque fino", "Pisos", "Cielorrasos", "Pintura"],
+    "especialidades": [
+      "Revoque fino",
+      "Pisos",
+      "Cielorrasos",
+      "Pintura"
+    ],
     "descripcion": "Especialista en terminaciones y acabados de construcción. Revoque fino, veneciano, colocación de pisos y revestimientos, cielorrasos de yeso y pintura.",
     "tel": "2494300002",
     "instagram": "jorgecastillo_construccion",
-    "pagina": "albaniles-tandil"
+    "pagina": "albaniles-tandil",
+    "activo": true,
+    "foto": "jorge-castillo.jpg"
   },
   {
     "nombre": "Fabián Moreno",
     "titulo": "Albañil · Estructuras y losas",
     "rubro": "albanil",
     "emoji": "🧱",
-    "especialidades": ["Estructuras", "Losas", "Fundaciones"],
+    "especialidades": [
+      "Estructuras",
+      "Losas",
+      "Fundaciones"
+    ],
     "descripcion": "Especializado en estructuras de hormigón armado. Losas, vigas, columnas y fundaciones para proyectos residenciales y comerciales en Tandil y la región.",
     "tel": "2494300003",
     "instagram": "fabianmoreno_obras",
-    "pagina": "albaniles-tandil"
+    "pagina": "albaniles-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Eduardo Giménez",
     "titulo": "Albañil · Construcción y Reformas",
     "rubro": "albanil",
     "emoji": "🧱",
-    "especialidades": ["Albañilería general", "Revoques", "Contrapisos"],
+    "especialidades": [
+      "Albañilería general",
+      "Revoques",
+      "Contrapisos"
+    ],
     "descripcion": "Albañil con 18 años de experiencia en Tandil. Trabajos de albañilería en general: revoques, contrapisos, revestimientos y pequeñas obras. Atiende obras nuevas y reparaciones de todo tipo.",
     "tel": "2494900001",
     "instagram": "eduardogim_albanil",
-    "pagina": "albaniles-tandil"
+    "pagina": "albaniles-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Arq. Laura Gómez",
     "titulo": "Arquitecta · Viviendas",
     "rubro": "arquitectura",
     "emoji": "🏛️",
-    "especialidades": ["Diseño", "Planos", "Permisos municipales"],
+    "especialidades": [
+      "Diseño",
+      "Planos",
+      "Permisos municipales"
+    ],
     "descripcion": "12 años de experiencia en diseño residencial. Proyectos de viviendas, ampliaciones y gestión completa de planos y permisos ante el municipio de Tandil.",
     "tel": "2494400001",
     "instagram": "arq.lauragomez",
-    "pagina": "arquitectos-tandil"
+    "pagina": "arquitectos-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Arq. Nicolás Ferrara",
     "titulo": "Arquitecto · Comercial",
     "rubro": "arquitectura",
     "emoji": "🏛️",
-    "especialidades": ["Locales comerciales", "Oficinas", "Render 3D"],
+    "especialidades": [
+      "Locales comerciales",
+      "Oficinas",
+      "Render 3D"
+    ],
     "descripcion": "Especializado en arquitectura comercial. Diseño de locales, restaurantes y oficinas con renders 3D fotorrealistas. Atiende en Tandil y Mar del Plata.",
     "tel": "2494400002",
     "instagram": "arqnicolasferrara",
-    "pagina": "arquitectos-tandil"
+    "pagina": "arquitectos-tandil",
+    "activo": true,
+    "foto": ""
+  },
+  {
+    "nombre": "Arq. Christian Collova",
+    "titulo": "Arquitecto · Comercial",
+    "rubro": "arquitectura",
+    "emoji": "🏛️",
+    "especialidades": [
+      "Locales comerciales",
+      "Oficinas",
+      "Render 3D"
+    ],
+    "descripcion": "Jugador de toda la cancha.",
+    "tel": "2494318772",
+    "instagram": "christianesteban.collova",
+    "pagina": "arquitectos-tandil",
+    "activo": true,
+    "foto": "christian-collova.jpeg"
   },
   {
     "nombre": "Arq. Sofía Andreani",
     "titulo": "Arquitecta · Interiorismo",
     "rubro": "arquitectura",
     "emoji": "🏛️",
-    "especialidades": ["Interiorismo", "Diseño de interiores", "Remodelación"],
+    "especialidades": [
+      "Interiorismo",
+      "Diseño de interiores",
+      "Remodelación"
+    ],
     "descripcion": "Arquitecta e interiorista. Remodelación de ambientes, cocinas y baños. Proyectos llave en mano en Tandil.",
     "tel": "2494400003",
     "instagram": "arqsofia.andreani",
-    "pagina": "arquitectos-tandil"
+    "pagina": "arquitectos-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Diego Ferreyra",
     "titulo": "Zinguero · Techos",
     "rubro": "zingueria",
-    "emoji": "🌿",
-    "especialidades": ["Techos", "Canaletas", "Impermeabilización"],
-    "descripcion": "18 años de experiencia. Techos de chapa y tejas, canaletas, bajadas y impermeabilización de terrazas y balcones. Urgencias.",
+    "foto": "foto-prueba.jpeg",
+    "especialidades": [
+      "Techos",
+      "Canaletas",
+      "Impermeabilización"
+    ],
+    "descripcion": "",
     "tel": "2494500001",
     "instagram": "diegoferreyra_zinguero",
-    "pagina": "zingueros-tandil"
+    "pagina": "zingueros-tandil",
+    "activo": true
   },
   {
     "nombre": "Marcelo Suárez",
     "titulo": "Zinguero · Revestimientos",
     "rubro": "zingueria",
-    "emoji": "🌿",
-    "especialidades": ["Chapa", "Steel framing", "Membrana"],
-    "descripcion": "Especialista en revestimientos y cubiertas. Steel framing, paneles sandwich y membranas asfálticas para clima serrano. Trabaja en toda la región de Tandil.",
+    "foto": "foto-prueba.jpeg",
+    "especialidades": [
+      "Chapa",
+      "Steel framing",
+      "Membrana"
+    ],
+    "descripcion": "",
     "tel": "2494500002",
     "instagram": "marcelosuarez_techos",
-    "pagina": "zingueros-tandil"
+    "pagina": "zingueros-tandil",
+    "activo": true
+  },
+  {
+    "nombre": "Claudio Caniggia",
+    "titulo": "Zinguero · Techos y Canaletas",
+    "rubro": "zingueria",
+    "especialidades": [
+      "Canaletas",
+      "Techos de chapa",
+      "Impermeabilización"
+    ],
+    "descripcion": "El hijo del viento, especialista en techos y canaletas.",
+    "tel": "2494500003",
+    "instagram": "caniggia_zinguero",
+    "pagina": "zingueros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Ana Pereyra",
     "titulo": "Paisajista · Diseño de jardines",
     "rubro": "paisajismo",
     "emoji": "🌳",
-    "especialidades": ["Diseño de jardines", "Riego automatizado", "Mantenimiento"],
+    "especialidades": [
+      "Diseño de jardines",
+      "Riego automatizado",
+      "Mantenimiento"
+    ],
     "descripcion": "Paisajista universitaria con 10 años de experiencia. Diseño de jardines residenciales, sistemas de riego automatizado y mantenimiento periódico.",
     "tel": "2494800001",
     "instagram": "anapereyra_paisajismo",
-    "pagina": "paisajistas-tandil"
+    "pagina": "paisajistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Nicolás Vera",
     "titulo": "Paisajista · Espacios verdes",
     "rubro": "paisajismo",
     "emoji": "🌳",
-    "especialidades": ["Parques", "Poda técnica", "Césped", "Mantenimiento"],
+    "especialidades": [
+      "Parques",
+      "Poda técnica",
+      "Césped",
+      "Mantenimiento"
+    ],
     "descripcion": "Mantenimiento de espacios verdes. Poda técnica, siembra de césped y senderos. Atiende barrios privados, clubes y viviendas en Tandil.",
     "tel": "2494800002",
     "instagram": "nicolasvera_verde",
-    "pagina": "paisajistas-tandil"
+    "pagina": "paisajistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Valeria Quiroga",
     "titulo": "Paisajista · Terrazas",
     "rubro": "paisajismo",
     "emoji": "🌳",
-    "especialidades": ["Terrazas verdes", "Jardín vertical", "Maceteros"],
+    "especialidades": [
+      "Terrazas verdes",
+      "Jardín vertical",
+      "Maceteros"
+    ],
     "descripcion": "Espacios verdes para terrazas, balcones e interiores. Jardines verticales y plantas para clima de Tandil.",
     "tel": "2494800003",
     "instagram": "valeriaquiroga_verde",
-    "pagina": "paisajistas-tandil"
+    "pagina": "paisajistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Mario Quintana",
     "titulo": "Techista · Tejas y Chapas",
     "rubro": "techista",
     "emoji": "🏠",
-    "especialidades": ["Tejas coloniales", "Chapa sinusoidal", "Reparaciones"],
+    "especialidades": [
+      "Tejas coloniales",
+      "Chapa sinusoidal",
+      "Reparaciones"
+    ],
     "descripcion": "Techista con 20 años en Tandil. Instalación de techos de tejas, chapa y pizarra. Reparaciones, impermeabilización y mantenimiento de cubiertas. Trabajos garantizados.",
     "tel": "2494910001",
     "instagram": "marioquintana_techos",
-    "pagina": "techistas-tandil"
+    "pagina": "techistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Daniela Fuentes",
     "titulo": "Techista · Membranas e Impermeabilización",
     "rubro": "techista",
     "emoji": "🏠",
-    "especialidades": ["Membranas", "Impermeabilización", "Losas y terrazas"],
+    "especialidades": [
+      "Membranas",
+      "Impermeabilización",
+      "Losas y terrazas"
+    ],
     "descripcion": "Especializada en impermeabilización de losas, terrazas y balcones. Aplicación de membranas asfálticas y líquidas. Diagnóstico de filtraciones y soluciones duraderas en Tandil.",
     "tel": "2494910002",
     "instagram": "danielafuentes_techos",
-    "pagina": "techistas-tandil"
+    "pagina": "techistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Oscar Beltrán",
     "titulo": "Techista · Cubiertas y Estructuras",
     "rubro": "techista",
     "emoji": "🏠",
-    "especialidades": ["Estructura de techo", "Panel sandwich", "Policarbonato"],
+    "especialidades": [
+      "Estructura de techo",
+      "Panel sandwich",
+      "Policarbonato"
+    ],
     "descripcion": "Techista con experiencia en estructuras de techo y cubiertas especiales. Panel sandwich, policarbonato y techos para galpones e industrias. Presupuesto sin cargo en Tandil.",
     "tel": "2494910003",
     "instagram": "oscarbeltran_cubiertas",
-    "pagina": "techistas-tandil"
+    "pagina": "techistas-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Rodolfo Casas",
     "titulo": "Pintor · Interiores y Exteriores",
     "rubro": "pintura",
     "emoji": "🎨",
-    "especialidades": ["Pintura interior", "Fachadas", "Esmalte sintético"],
+    "especialidades": [
+      "Pintura interior",
+      "Fachadas",
+      "Esmalte sintético"
+    ],
     "descripcion": "Pintor profesional con 12 años de experiencia en Tandil. Pintura de interiores y fachadas, esmalte sintético y látex. Prolijo, puntual y con garantía de terminación.",
     "tel": "2494920001",
     "instagram": "rodolfocasas_pintor",
-    "pagina": "pintores-tandil"
+    "pagina": "pintores-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Alejandra Núñez",
     "titulo": "Pintora · Texturas Decorativas",
     "rubro": "pintura",
     "emoji": "🎨",
-    "especialidades": ["Texturas", "Veneciano", "Efectos decorativos"],
+    "especialidades": [
+      "Texturas",
+      "Veneciano",
+      "Efectos decorativos"
+    ],
     "descripcion": "Pintora especializada en texturas decorativas. Veneciano, microcemento, piedra y efectos naturales. Asesoramiento en colores y materiales para cada ambiente. Trabaja en Tandil.",
     "tel": "2494920002",
     "instagram": "alejandranunez_texturas",
-    "pagina": "pintores-tandil"
+    "pagina": "pintores-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Marcos Delgado",
     "titulo": "Pintor · Obra y Construcción",
     "rubro": "pintura",
     "emoji": "🎨",
-    "especialidades": ["Pintura de obra", "Frentes", "Cielorrasos"],
+    "especialidades": [
+      "Pintura de obra",
+      "Frentes",
+      "Cielorrasos"
+    ],
     "descripcion": "Pintor para constructoras y obras en Tandil. Acabados para obra nueva, refacciones y edificios. Trabajo en equipo, tiempos acordados y precios competitivos.",
     "tel": "2494920003",
     "instagram": "marcosdelgado_pintura",
-    "pagina": "pintores-tandil"
+    "pagina": "pintores-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Roberto Álvarez",
     "titulo": "Maestro Mayor de Obra",
     "rubro": "mmo",
     "emoji": "🏗️",
-    "especialidades": ["Obra nueva", "Refacciones", "Dirección técnica"],
+    "especialidades": [
+      "Obra nueva",
+      "Refacciones",
+      "Dirección técnica"
+    ],
     "descripcion": "20 años de trayectoria en Tandil. Construcción de viviendas desde cero, ampliaciones y refacciones integrales. Dirección técnica de obra. Presupuesto sin cargo.",
     "tel": "2494300001",
     "instagram": "robertoalvarez_obra",
-    "pagina": "maestros-mayor-tandil"
+    "pagina": "maestros-mayor-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Beatriz Palavecino",
     "titulo": "Maestra Mayor de Obra",
     "rubro": "mmo",
     "emoji": "🏗️",
-    "especialidades": ["Dirección de obra", "Presupuestos", "Viviendas"],
+    "especialidades": [
+      "Dirección de obra",
+      "Presupuestos",
+      "Viviendas"
+    ],
     "descripcion": "Maestra Mayor de Obra con 15 años de experiencia. Dirección técnica de obras residenciales y comerciales. Gestión de permisos municipales y presupuestos detallados. Trabaja en Tandil y alrededores.",
     "tel": "2494900002",
     "instagram": "beatrizpalav_mmo",
-    "pagina": "maestros-mayor-tandil"
+    "pagina": "maestros-mayor-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Oscar Cisneros",
     "titulo": "Maestro Mayor · Obras comerciales",
     "rubro": "mmo",
     "emoji": "🏗️",
-    "especialidades": ["Obras comerciales", "Certificaciones", "Ampliaciones"],
+    "especialidades": [
+      "Obras comerciales",
+      "Certificaciones",
+      "Ampliaciones"
+    ],
     "descripcion": "Maestro Mayor de Obra especializado en obras comerciales e industriales. Certificaciones, planos de obra y dirección técnica. 22 años de trayectoria en la región.",
     "tel": "2494900003",
     "instagram": "oscarcisneros_obra",
-    "pagina": "maestros-mayor-tandil"
+    "pagina": "maestros-mayor-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Sergio Barrientos",
     "titulo": "Carpintero · Muebles a medida",
     "rubro": "carpinteria",
     "emoji": "🪵",
-    "especialidades": ["Muebles", "Placares", "Cocinas", "Aberturas"],
+    "especialidades": [
+      "Muebles",
+      "Placares",
+      "Cocinas",
+      "Aberturas"
+    ],
     "descripcion": "Taller propio y 16 años de experiencia. Muebles de cocina, placares, bibliotecas y escritorios a medida. Instalación incluida. Presupuesto sin cargo.",
     "tel": "2494700001",
     "instagram": "sergiobarrientos_madera",
-    "pagina": "carpinteros-tandil"
+    "pagina": "carpinteros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Tomás Rivas",
     "titulo": "Carpintero · Aberturas",
     "rubro": "carpinteria",
     "emoji": "🪵",
-    "especialidades": ["Puertas", "Ventanas", "Deck", "Pisos de madera"],
+    "especialidades": [
+      "Puertas",
+      "Ventanas",
+      "Deck",
+      "Pisos de madera"
+    ],
     "descripcion": "Especializado en aberturas y deck exterior. Puertas, ventanas, pisos de madera maciza y restauración de aberturas antiguas.",
     "tel": "2494700002",
     "instagram": "tomasrivas_carpinteria",
-    "pagina": "carpinteros-tandil"
+    "pagina": "carpinteros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Andrés Molina",
     "titulo": "Carpintero · Obra",
     "rubro": "carpinteria",
     "emoji": "🪵",
-    "especialidades": ["Encofrados", "Tirantería", "Techos de madera"],
+    "especialidades": [
+      "Encofrados",
+      "Tirantería",
+      "Techos de madera"
+    ],
     "descripcion": "Carpintero de obra. Tirantería, encofrados y entramados. Trabaja con arquitectos y constructoras en Tandil.",
     "tel": "2494700003",
     "instagram": "andresmolina_obra",
-    "pagina": "carpinteros-tandil"
+    "pagina": "carpinteros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Hernán Soto",
     "titulo": "Herrero · Estructuras metálicas",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Rejas", "Portones", "Escaleras", "Soldadura"],
+    "especialidades": [
+      "Rejas",
+      "Portones",
+      "Escaleras",
+      "Soldadura"
+    ],
     "descripcion": "Taller propio en Tandil. Rejas de seguridad, portones, escaleras y estructuras metálicas. 14 años de experiencia. Trabajo garantizado por escrito.",
     "tel": "2494600001",
     "instagram": "hernansoto_herreria",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Claudio Peralta",
     "titulo": "Herrero · Artístico",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Herrería artística", "Muebles de hierro", "Diseño"],
+    "especialidades": [
+      "Herrería artística",
+      "Muebles de hierro",
+      "Diseño"
+    ],
     "descripcion": "Herrería artística y mobiliario de hierro forjado y soldado. Mesas, sillas, estantes y decoración. También rejas y portones con diseño personalizado.",
     "tel": "2494600002",
     "instagram": "claudioperalta_hierro",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Sergio Maldonado",
     "titulo": "Herrero · Industrial",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Estructuras industriales", "Galpones", "Mezzanines"],
+    "especialidades": [
+      "Estructuras industriales",
+      "Galpones",
+      "Mezzanines"
+    ],
     "descripcion": "Herrero industrial con más de 20 años. Galpones, depósitos, mezzanines y estanterías metálicas en Tandil.",
     "tel": "2494600003",
     "instagram": "sergiomaldonado_metalurgica",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Sebastián Moya",
     "titulo": "Durlero · Drywall y Tabiques",
     "rubro": "durleria",
     "emoji": "🪚",
-    "especialidades": ["Tabiques de drywall", "Cielorrasos", "Molduras"],
+    "especialidades": [
+      "Tabiques de drywall",
+      "Cielorrasos",
+      "Molduras"
+    ],
     "descripcion": "Durlero con 10 años de experiencia en sistemas en seco. Tabiques de durlock, cielorrasos de yeso y molduras. Rápido, limpio y con terminaciones profesionales en Tandil.",
     "tel": "2494930001",
     "instagram": "sebastianmoya_durlero",
-    "pagina": "durleros-tandil"
+    "pagina": "durleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Ignacio Parodi",
     "titulo": "Durlero · Sistemas en Seco",
     "rubro": "durleria",
     "emoji": "🪚",
-    "especialidades": ["Sistemas en seco", "Durlock", "Aislación acústica"],
+    "especialidades": [
+      "Sistemas en seco",
+      "Durlock",
+      "Aislación acústica"
+    ],
     "descripcion": "Especialista en construcción en seco. Tabiques, divisiones, aislación acústica y térmica con Durlock. Proyectos residenciales y comerciales en Tandil y zona.",
     "tel": "2494930002",
     "instagram": "ignaparodi_drywall",
-    "pagina": "durleros-tandil"
+    "pagina": "durleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Cecilia Romero",
     "titulo": "Durlera · Techos y Decoración",
     "rubro": "durleria",
     "emoji": "🪚",
-    "especialidades": ["Cielorrasos de diseño", "Molduras", "Nichos"],
+    "especialidades": [
+      "Cielorrasos de diseño",
+      "Molduras",
+      "Nichos"
+    ],
     "descripcion": "Durlera con especialización en cielorrasos de diseño, molduras y nichos decorativos. Trabajo de precisión y terminaciones impecables. Atiende hogares y locales en Tandil.",
     "tel": "2494930003",
     "instagram": "ceciliaromero_durlera",
-    "pagina": "durleros-tandil"
+    "pagina": "durleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Fernando Godoy",
     "titulo": "Steeler · Steel Framing",
     "rubro": "steelframing",
     "emoji": "⚙️",
-    "especialidades": ["Viviendas Steel Framing", "Ampliaciones", "Locales"],
+    "especialidades": [
+      "Viviendas Steel Framing",
+      "Ampliaciones",
+      "Locales"
+    ],
     "descripcion": "Constructor especializado en Steel Framing. Viviendas completas, ampliaciones y locales comerciales en estructura de acero galvanizado. Construcción rápida, seca y eficiente en Tandil.",
     "tel": "2494940001",
     "instagram": "fernandogodoy_steel",
-    "pagina": "steeleros-tandil"
+    "pagina": "steeleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Cintia Vega",
     "titulo": "Constructora · Steel Framing y Diseño",
     "rubro": "steelframing",
     "emoji": "⚙️",
-    "especialidades": ["Diseño Steel Framing", "Asesoramiento", "Sustentabilidad"],
+    "especialidades": [
+      "Diseño Steel Framing",
+      "Asesoramiento",
+      "Sustentabilidad"
+    ],
     "descripcion": "Constructora con formación en Steel Framing. Proyectos sustentables, aislación térmica y acústica de primer nivel. Asesoramiento integral desde el diseño hasta la entrega de llave.",
     "tel": "2494940002",
     "instagram": "cintiavega_steel",
-    "pagina": "steeleros-tandil"
+    "pagina": "steeleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Rodrigo Acuña",
     "titulo": "Steeler · Construcción Industrializada",
     "rubro": "steelframing",
     "emoji": "⚙️",
-    "especialidades": ["Módulos prefabricados", "Steel Framing", "Galpones"],
+    "especialidades": [
+      "Módulos prefabricados",
+      "Steel Framing",
+      "Galpones"
+    ],
     "descripcion": "Experto en construcción industrializada con Steel Framing. Módulos prefabricados, galpones y viviendas de bajo costo. Presupuesto rápido y construcción garantizada en Tandil.",
     "tel": "2494940003",
     "instagram": "rodrigoacuna_steelframing",
-    "pagina": "steeleros-tandil"
+    "pagina": "steeleros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Horacio Prieto",
     "titulo": "Tornero · Torno CNC",
     "rubro": "torneria",
     "emoji": "🪛",
-    "especialidades": ["Torno CNC", "Mecanizado", "Piezas especiales"],
+    "especialidades": [
+      "Torno CNC",
+      "Mecanizado",
+      "Piezas especiales"
+    ],
     "descripcion": "Tornero con taller propio en Tandil. Mecanizado de precisión en torno CNC y convencional. Piezas a medida para industria, agro y talleres mecánicos. Entrega rápida.",
     "tel": "2494950001",
     "instagram": "horacioprieto_tornero",
-    "pagina": "torneros-tandil"
+    "pagina": "torneros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Ariel Contreras",
     "titulo": "Tornero Mecánico",
     "rubro": "torneria",
     "emoji": "🪛",
-    "especialidades": ["Torno paralelo", "Fresadora", "Soldadura"],
+    "especialidades": [
+      "Torno paralelo",
+      "Fresadora",
+      "Soldadura"
+    ],
     "descripcion": "Tornero mecánico con 15 años de experiencia. Torno paralelo, fresa y soldadura. Reparación de piezas, fabricación de repuestos y trabajos de mantenimiento industrial en Tandil.",
     "tel": "2494950002",
     "instagram": "arielcontreras_torneria",
-    "pagina": "torneros-tandil"
+    "pagina": "torneros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Gabriel Fernández",
     "titulo": "Tornería de Precisión",
     "rubro": "torneria",
     "emoji": "🪛",
-    "especialidades": ["Alta precisión", "Inoxidable", "Bronce y aluminio"],
+    "especialidades": [
+      "Alta precisión",
+      "Inoxidable",
+      "Bronce y aluminio"
+    ],
     "descripcion": "Tornería de alta precisión. Trabajo en acero inoxidable, bronce y aluminio. Piezas para la industria láctea, automotriz y agropecuaria. Taller en Tandil con 20 años de historia.",
     "tel": "2494950003",
     "instagram": "gabrielfernandez_torneria",
-    "pagina": "torneros-tandil"
+    "pagina": "torneros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Luis Aguirre",
     "titulo": "Vidriero · Vidrios y Espejos",
     "rubro": "vidrieria",
     "emoji": "🪟",
-    "especialidades": ["Vidrios comunes", "Espejos", "Vitraux"],
+    "especialidades": [
+      "Vidrios comunes",
+      "Espejos",
+      "Vitraux"
+    ],
     "descripcion": "Vidriero con 14 años en Tandil. Corte y colocación de vidrios comunes, templados y espejos. Reparación de aberturas y trabajos de vitraux. Presupuesto sin cargo a domicilio.",
     "tel": "2494960001",
     "instagram": "luisaguirre_vidrieria",
-    "pagina": "vidrieros-tandil"
+    "pagina": "vidrieros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Natalia Bogado",
     "titulo": "Vidriería · DVH y Templados",
     "rubro": "vidrieria",
     "emoji": "🪟",
-    "especialidades": ["Doble vidriado hermético", "Templado", "Laminado"],
+    "especialidades": [
+      "Doble vidriado hermético",
+      "Templado",
+      "Laminado"
+    ],
     "descripcion": "Especialista en vidrios de seguridad y eficiencia energética. Doble vidriado hermético (DVH), templado y laminado para ventanas, puertas y fachadas en Tandil.",
     "tel": "2494960002",
     "instagram": "nataliabogado_vidrios",
-    "pagina": "vidrieros-tandil"
+    "pagina": "vidrieros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Carlos Insaurralde",
     "titulo": "Vidriero · Aberturas de Aluminio",
     "rubro": "vidrieria",
     "emoji": "🪟",
-    "especialidades": ["Aberturas de aluminio", "Mamparas", "Cerramientos"],
+    "especialidades": [
+      "Aberturas de aluminio",
+      "Mamparas",
+      "Cerramientos"
+    ],
     "descripcion": "Vidriero especializado en aberturas de aluminio y PVC. Mamparas de baño, cerramientos de balcones y cortinas de vidrio. Trabaja en obras nuevas y reformas en Tandil.",
     "tel": "2494960003",
     "instagram": "carlosinsaurralde_vidrio",
-    "pagina": "vidrieros-tandil"
+    "pagina": "vidrieros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Raúl Montes",
     "titulo": "Herrero · Acero Inoxidable",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Mesadas inox", "Pasamanos", "Equipamiento gastronómico"],
+    "especialidades": [
+      "Mesadas inox",
+      "Pasamanos",
+      "Equipamiento gastronómico"
+    ],
     "descripcion": "Herrería especial en acero inoxidable. Mesadas para cocinas y restaurantes, pasamanos y equipamiento gastronómico. Trabajo de precisión con soldadura TIG en Tandil.",
     "tel": "2494970001",
     "instagram": "raulmontes_inox",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Patricia Salinas",
     "titulo": "Herrera · Inox y Decoración",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Mesadas y zócalos", "Balcones", "Diseño en inox"],
+    "especialidades": [
+      "Mesadas y zócalos",
+      "Balcones",
+      "Diseño en inox"
+    ],
     "descripcion": "Herrería en acero inoxidable de alta calidad. Mesadas, zócalos, balcones y elementos decorativos. Diseño personalizado y terminaciones espejo o satinado. Atiende en Tandil y zona.",
     "tel": "2494970002",
     "instagram": "patriciasalinas_inox",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   },
   {
     "nombre": "Emilio Barrera",
     "titulo": "Herrero · Inox y Vidrio",
     "rubro": "herreria",
     "emoji": "🔩",
-    "especialidades": ["Barandas vidrio e inox", "Pérgolas", "Cerramientos especiales"],
+    "especialidades": [
+      "Barandas vidrio e inox",
+      "Pérgolas",
+      "Cerramientos especiales"
+    ],
     "descripcion": "Especialista en combinaciones de acero inoxidable y vidrio. Barandas de diseño, pérgolas y cerramientos para terrazas. Proyectos de alto estándar en Tandil y alrededores.",
     "tel": "2494970003",
     "instagram": "emiliobarrera_inox",
-    "pagina": "herreros-tandil"
+    "pagina": "herreros-tandil",
+    "activo": true,
+    "foto": ""
   }
 ]

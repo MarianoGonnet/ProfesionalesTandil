@@ -227,6 +227,45 @@ header img { height: 40px; object-fit: contain; }
 }
 .contenido-sub { font-size: 13px; color: var(--texto-suave); margin-bottom: 20px; }
 
+/* ── BUSCADOR ── */
+.contenido-header-row { margin-bottom: 24px; }
+.buscador-wrap { }
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanco);
+  border: 1.5px solid var(--borde);
+  border-radius: 10px;
+  padding: 0 14px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.buscador:focus-within {
+  border-color: var(--dorado);
+  box-shadow: 0 0 0 3px rgba(184,134,11,0.1);
+}
+.buscador input[type="search"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 13px 0;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: var(--texto);
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.buscador input[type="search"]::placeholder { color: var(--texto-suave); }
+.buscador input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
+.sin-resultados {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 15px;
+  padding: 52px 0;
+  line-height: 1.7;
+}
+
 /* ── GRID — mobile: 1 columna ── */
 .grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
 
@@ -250,6 +289,15 @@ header img { height: 40px; object-fit: contain; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
+}
+.ficha-avatar--foto { background: none; border-radius: 50%; }
+.ficha-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
 }
 .ficha-nombre {
   font-size: 18px;
@@ -479,6 +527,16 @@ footer a:hover { color: var(--dorado-claro); }
 
   .contenido        { padding: 32px 48px; }
   .contenido-titulo { font-size: 30px; }
+  .contenido-sub    { margin-bottom: 0; }
+  .contenido-header-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .buscador-wrap { flex-shrink: 0; }
+  .buscador      { max-width: 360px; width: 360px; }
   .grid             { grid-template-columns: repeat(auto-fit, minmax(280px, 360px)); gap: 20px; justify-content: center; }
 
   .banner { padding: 56px 80px; }

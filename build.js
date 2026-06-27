@@ -8,7 +8,7 @@ const fs   = require('fs');
 const path = require('path');
 
 // ── Cargar datos ──────────────────────────────
-const profesionales = JSON.parse(fs.readFileSync('profesionales.json', 'utf8'));
+const profesionales = JSON.parse(fs.readFileSync('profesionales.json', 'utf8')).filter(p => p.activo !== false);
 const OUT           = path.join(__dirname, 'dist');
 
 // Logo SVG inline — sin dependencia de archivo externo
@@ -25,6 +25,16 @@ if (!fs.existsSync(OUT)) fs.mkdirSync(OUT);
 ['styles.css', 'main.js', 'sitemap.xml', 'robots.txt'].forEach(f => {
   if (fs.existsSync(f)) fs.copyFileSync(f, path.join(OUT, f));
 });
+
+// Copiar carpeta fotos/ a dist/fotos/
+const FOTOS_SRC = path.join(__dirname, 'fotos');
+const FOTOS_OUT = path.join(OUT, 'fotos');
+if (fs.existsSync(FOTOS_SRC)) {
+  if (!fs.existsSync(FOTOS_OUT)) fs.mkdirSync(FOTOS_OUT);
+  fs.readdirSync(FOTOS_SRC).forEach(f => {
+    if (f !== '.gitkeep') fs.copyFileSync(path.join(FOTOS_SRC, f), path.join(FOTOS_OUT, f));
+  });
+}
 
 // ── Rubros definidos ─────────────────────────
 const RUBROS = [
@@ -72,13 +82,16 @@ function buildNav(currentSlug) {
 }
 
 function buildFicha(p) {
-  const icon = lucideIcon(RUBRO_ICON[p.rubro] || 'tool', 20, 'var(--dorado)');
-  const tags = p.especialidades.map(e => `<span class="tag">${e}</span>`).join('');
+  const icon   = lucideIcon(RUBRO_ICON[p.rubro] || 'tool', 20, 'var(--dorado)');
+  const tags   = p.especialidades.map(e => `<span class="tag">${e}</span>`).join('');
+  const avatar = p.foto
+    ? `<img class="ficha-foto" src="fotos/${p.foto}" alt="${p.nombre}" loading="lazy">`
+    : icon;
   return `
     <article class="ficha" itemscope itemtype="https://schema.org/LocalBusiness">
       <div class="ficha-inner">
         <div class="ficha-top">
-          <div class="ficha-avatar">${icon}</div>
+          <div class="ficha-avatar${p.foto ? ' ficha-avatar--foto' : ''}">${avatar}</div>
           <div>
             <div class="ficha-nombre" itemprop="name">${p.nombre}</div>
             <div class="ficha-titulo">${p.titulo}</div>
@@ -86,7 +99,7 @@ function buildFicha(p) {
         </div>
         <p class="ficha-desc" itemprop="description">${p.descripcion}</p>
         <div class="ficha-btns">
-          <a class="btn-wa" href="https://wa.me/549${p.tel}" target="_blank" title="WhatsApp ${p.nombre}">${WA_SVG} WhatsApp</a>
+          <a class="btn-wa" href="https://wa.me/549${p.tel}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank" title="WhatsApp ${p.nombre}">${WA_SVG} WhatsApp</a>
           <a class="btn-ig" href="https://instagram.com/${p.instagram}" target="_blank" title="Instagram ${p.nombre}">${IG_SVG} Instagram</a>
         </div>
       </div>
@@ -103,7 +116,7 @@ function buildCarrusel() {
       <div class="carrusel-nombre">${p.nombre}</div>
       <div class="carrusel-rubro">${p.titulo}</div>
       <div class="carrusel-esp">${p.especialidades.join(' · ')}</div>
-      <a class="carrusel-cta" href="https://wa.me/549${p.tel}" target="_blank">${WA_SVG} Escribir por WhatsApp</a>
+      <a class="carrusel-cta" href="https://wa.me/549${p.tel}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank">${WA_SVG} Escribir por WhatsApp</a>
     </div>`;
   }).join('');
 }
@@ -265,9 +278,20 @@ function buildIndex() {
     main: mainDirect,
   }).replace('<main class="contenido" id="contenido"></main>',
     `<main class="contenido">
-      <div class="contenido-titulo">Todos los profesionales</div>
-      <div class="contenido-sub">${profesionales.length} profesionales verificados en Tandil</div>
-      <div class="grid">${fichas}</div>
+      <div class="contenido-header-row">
+        <div>
+          <div class="contenido-titulo">Todos los profesionales</div>
+          <div class="contenido-sub">${profesionales.length} profesionales verificados en Tandil</div>
+        </div>
+        <div class="buscador-wrap">
+          <div class="buscador">
+            ${lucideIcon('search', 18, 'var(--texto-suave)')}
+            <input type="search" id="buscador-input" placeholder="Buscar por nombre, oficio o descripción…" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </div>
+      <div class="grid" id="grid-profesionales">${fichas}</div>
+      <p class="sin-resultados" id="sin-resultados" hidden>No encontramos resultados para "<strong id="sin-q"></strong>". Probá con otra palabra.</p>
     </main>`);
 
   fs.writeFileSync(path.join(OUT, 'index.html'), html);

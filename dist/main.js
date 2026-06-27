@@ -107,6 +107,33 @@ function validarForm(form) {
   return ok;
 }
 
+// ── BUSCADOR ──
+(function () {
+  const input = document.getElementById('buscador-input');
+  if (!input) return;
+
+  const grid     = document.getElementById('grid-profesionales');
+  const sinMsg   = document.getElementById('sin-resultados');
+  const sinQ     = document.getElementById('sin-q');
+  const fichas   = Array.from(grid.querySelectorAll('.ficha'));
+
+  input.addEventListener('input', function () {
+    const q = this.value.trim().toLowerCase();
+
+    let visibles = 0;
+    fichas.forEach(f => {
+      const coincide = !q || f.textContent.toLowerCase().includes(q);
+      f.style.display = coincide ? '' : 'none';
+      if (coincide) visibles++;
+    });
+
+    if (sinMsg) {
+      sinMsg.hidden = visibles > 0;
+      if (sinQ) sinQ.textContent = this.value.trim();
+    }
+  });
+})();
+
 // ── SIDEBAR ──
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
