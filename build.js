@@ -14,10 +14,10 @@ const OUT           = path.join(__dirname, 'dist');
 
 // Logo SVG inline — sin dependencia de archivo externo
 const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 44" height="40" aria-label="Profesionales Tandil" style="display:block">
-  <polygon points="22,3 39,22 22,41 5,22" fill="none" stroke="#D4A017" stroke-width="1.8"/>
-  <polygon points="22,12 31,22 22,32 13,22" fill="#B8860B" fill-opacity="0.32"/>
-  <text x="47" y="18" font-family="'Helvetica Neue',Arial,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.6" fill="rgba(255,255,255,0.52)">PROFESIONALES</text>
-  <text x="46" y="39" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" letter-spacing="0.5" fill="#D4A017">Tandil</text>
+  <polygon points="22,3 39,22 22,41 5,22" fill="none" stroke="#C9A24B" stroke-width="1.8"/>
+  <polygon points="22,12 31,22 22,32 13,22" fill="#C9A24B" fill-opacity="0.3"/>
+  <text x="47" y="18" font-family="'Helvetica Neue',Arial,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.6" fill="rgba(255,255,255,0.42)">PROFESIONALES</text>
+  <text x="46" y="39" font-family="Georgia,'Times New Roman',serif" font-size="22" font-weight="700" letter-spacing="0.5" fill="#C9A24B">Tandil</text>
 </svg>`;
 
 if (!fs.existsSync(OUT)) fs.mkdirSync(OUT);
@@ -73,6 +73,14 @@ RUBROS.forEach(r => { RUBRO_ICON[r.key] = r.lucide; });
 // Opciones del select de rubros para el modal
 const RUBRO_OPTIONS_HTML = RUBROS.map(r => `<option value="${r.label}">${r.label}</option>`).join('\n          ');
 
+function buildChips(currentSlug) {
+  let chips = `<a class="chip${currentSlug === 'index' ? ' chip-activo' : ''}" href="index.html">${lucideIcon('layout-grid', 13, 'currentColor')} Todos</a>`;
+  RUBROS.forEach(r => {
+    chips += `<a class="chip${r.slug === currentSlug ? ' chip-activo' : ''}" href="${r.slug}.html">${lucideIcon(r.lucide, 13, 'currentColor')} ${r.label}</a>`;
+  });
+  return `<div class="chips-wrap">${chips}</div>`;
+}
+
 // Genera etiqueta Lucide con trazo fino
 function lucideIcon(name, size, color) {
   return `<i data-lucide="${name}" style="width:${size}px;height:${size}px;stroke:${color};stroke-width:1.5;fill:none;display:inline-flex;vertical-align:middle"></i>`;
@@ -112,12 +120,13 @@ function buildFicha(p) {
       <div class="ficha-inner">
         <div class="ficha-top">
           <div class="ficha-avatar${p.foto ? ' ficha-avatar--foto' : ''}">${avatar}</div>
-          <div>
+          <div class="ficha-info">
             <div class="ficha-nombre" itemprop="name">${esc(p.nombre)}</div>
             <div class="ficha-titulo">${esc(p.titulo)}</div>
           </div>
+          <span class="ficha-badge" title="Verificado">${lucideIcon('badge-check', 16, 'var(--dorado)')}</span>
         </div>
-<div class="ficha-btns">
+        <div class="ficha-btns">
           <a class="btn-wa" href="https://wa.me/549${esc(p.tel)}?text=${encodeURIComponent(`Hola ${p.nombre}, lo contacto a través de Profesionales Tandil. Me gustaría hacerle una consulta.`)}" target="_blank" rel="noopener noreferrer" title="WhatsApp ${esc(p.nombre)}">${WA_SVG} WhatsApp</a>
           <a class="btn-ig" href="https://instagram.com/${esc(p.instagram)}" target="_blank" rel="noopener noreferrer" title="Instagram ${esc(p.nombre)}">${IG_SVG} Instagram</a>
         </div>
@@ -195,12 +204,8 @@ function buildModal() {
         <input type="tel" id="f-tel" name="whatsapp" required maxlength="20" autocomplete="tel" placeholder="2494 123456">
       </div>
       <div class="form-group">
-        <label for="f-esp">Especialidades <span class="req">*</span></label>
-        <input type="text" id="f-esp" name="especialidades" required maxlength="120" placeholder="Ej: Destapes, gas, urgencias 24 hs">
-      </div>
-      <div class="form-group">
-        <label for="f-desc">Descripción <span class="req">*</span></label>
-        <textarea id="f-desc" name="descripcion" required minlength="20" maxlength="300" rows="3" placeholder="Contanos brevemente quién sos y qué servicio ofrecés en Tandil…"></textarea>
+        <label for="f-desc">Contanos sobre vos <span class="req">*</span></label>
+        <textarea id="f-desc" name="descripcion" required minlength="10" maxlength="300" rows="3" placeholder="Quién sos, qué servicio ofrecés, años de experiencia… (solo lo vemos nosotros)"></textarea>
         <span class="form-contador" id="desc-count">0 / 300</span>
       </div>
       <p class="form-aviso">* Campos obligatorios · Tu información es privada y no se comparte con terceros.</p>
@@ -241,15 +246,17 @@ function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main }) {
 <meta property="og:locale" content="es_AR">
 <script type="application/ld+json">${schema}</script>
 <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">${h1hidden}</h1>
 <header>
-  <a href="index.html">${LOGO_SVG}</a>
-  <div class="header-right">${lucideIcon('map-pin', 13, 'currentColor')} Tandil, Buenos Aires</div>
-  <button class="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+  <a href="index.html" class="logo-link">${LOGO_SVG}</a>
+  <div class="header-actions">
+    <button class="rubros-btn" onclick="toggleSidebar()" aria-haspopup="true">${lucideIcon('layout-grid', 15, 'currentColor')}<span>Rubros</span>${lucideIcon('chevron-down', 13, 'currentColor')}</button>
+    <a class="btn-header-cta" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer">Sumar mi ficha</a>
+  </div>
 </header>
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-label">Rubros</div>
@@ -260,18 +267,17 @@ ${main}
 <main class="contenido" id="contenido"></main>
 <div class="banner">
   <div><h2>¿Sos profesional en Tandil?</h2><p>Sumá tu ficha y empezá a recibir consultas hoy mismo.</p></div>
-  <button class="btn-cta" type="button" onclick="abrirModal()">Quiero aparecer</button>
+  <a class="btn-cta" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer">Quiero aparecer</a>
 </div>
 ${buildAvisosCarrusel()}
 <footer>
   <a href="index.html" class="footer-logo">${LOGO_SVG}</a>
-  <p><strong>Profesionales Tandil</strong> · Guía de Profesionales · Tandil, Buenos Aires · © 2025</p>
+  <p><strong>Profesionales Tandil</strong> · Guía de Profesionales · Tandil, Buenos Aires · © 2026</p>
   <div class="footer-links">${buildFooterLinks()}</div>
 </footer>
 <a class="wa-flotante" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">${WA_SVG}<span>Sumarte a la guía</span></a>
 <script src="main.js"></script>
 <script>lucide.createIcons();</script>
-${buildModal()}
 </body>
 </html>`;
 }
@@ -315,6 +321,7 @@ function buildIndex() {
     main: mainDirect,
   }).replace('<main class="contenido" id="contenido"></main>',
     `<main class="contenido">
+      ${buildChips('index')}
       <div class="contenido-header-row">
         <div>
           <div class="contenido-titulo">Todos los profesionales</div>
@@ -367,8 +374,13 @@ function buildRubroPage(rubro) {
     main: heroSection,
   }).replace('<main class="contenido" id="contenido"></main>',
     `<main class="contenido">
-      <div class="contenido-titulo">${rubro.titulo}</div>
-      <div class="contenido-sub">${lista.length} profesionales verificados en Tandil</div>
+      ${buildChips(rubro.slug)}
+      <div class="contenido-header-row">
+        <div>
+          <div class="contenido-titulo">${rubro.titulo}</div>
+          <div class="contenido-sub">${lista.length} profesionales verificados en Tandil</div>
+        </div>
+      </div>
       <div class="grid">${fichas}</div>
     </main>`);
 
