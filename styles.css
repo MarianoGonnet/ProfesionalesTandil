@@ -95,7 +95,7 @@ header {
 
 /* ── HERO ── */
 .hero {
-  background: var(--oscuro);
+  background: radial-gradient(ellipse 80% 55% at 50% 38%, rgba(201,162,75,0.13) 0%, transparent 68%), var(--oscuro);
   border-bottom: 2px solid rgba(201,162,75,0.3);
   padding: 48px 20px 40px;
   text-align: center;
