@@ -226,7 +226,7 @@ function buildFooterLinks() {
   return RUBROS.map(r => `<a href="${r.slug}.html">${r.label}</a>`).join('');
 }
 
-function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main }) {
+function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main, avisosHtml = buildAvisosCarrusel() }) {
   return `<!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -266,6 +266,7 @@ function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main }) {
 <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 ${main}
 <main class="contenido" id="contenido"></main>
+${avisosHtml}
 <div class="banner">
   <div><h2>¿Sos profesional en Tandil?</h2><p>Sumá tu ficha y empezá a recibir consultas hoy mismo.</p></div>
   <a class="btn-cta" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer">Quiero aparecer</a>
@@ -320,6 +321,7 @@ ${buildAvisosCarrusel()}`;
     h1hidden: 'Profesionales Tandil – Plomeros, Electricistas, Albañiles, Arquitectos, Techistas, Pintores, Herreros, Carpinteros, Durleros, Steeleros, Torneros, Vidrieros y más en Tandil, Buenos Aires',
     nav: buildNav('index'),
     main: mainDirect,
+    avisosHtml: '',
   }).replace('<main class="contenido" id="contenido"></main>',
     `<main class="contenido">
       ${buildChips('index')}
