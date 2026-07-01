@@ -270,7 +270,6 @@ ${main}
   <div><h2>¿Sos profesional en Tandil?</h2><p>Sumá tu ficha y empezá a recibir consultas hoy mismo.</p></div>
   <a class="btn-cta" href="https://wa.me/5492494318772?text=${encodeURIComponent('Hola, quiero sumarme a la guía Profesionales Tandil.')}" target="_blank" rel="noopener noreferrer">Quiero aparecer</a>
 </div>
-${buildAvisosCarrusel()}
 <footer>
   <a href="index.html" class="footer-logo">${LOGO_SVG}</a>
   <p><strong>Profesionales Tandil</strong> · Guía de Profesionales · Tandil, Buenos Aires · © 2026</p>
@@ -310,7 +309,8 @@ function buildIndex() {
   <div class="carrusel" id="carrusel">
     <div class="carrusel-track" id="carrusel-track">${buildCarrusel()}</div>
   </div>
-</div>`;
+</div>
+${buildAvisosCarrusel()}`;
 
   const html = wrapPage({
     title: 'Profesionales Tandil | Plomeros, Electricistas, Albañiles y Profesionales en Tandil',
