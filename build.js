@@ -23,7 +23,7 @@ const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 44" h
 if (!fs.existsSync(OUT)) fs.mkdirSync(OUT);
 
 // ── Copiar assets estáticos ───────────────────
-['styles.css', 'main.js', 'sitemap.xml', 'robots.txt'].forEach(f => {
+['styles.css', 'main.js', 'favicon.svg', 'sitemap.xml', 'robots.txt'].forEach(f => {
   if (fs.existsSync(f)) fs.copyFileSync(f, path.join(OUT, f));
 });
 
@@ -245,6 +245,7 @@ function wrapPage({ title, metaDesc, canonical, schema, h1hidden, nav, main }) {
 <meta property="og:url" content="https://www.profesionalestrandil.com.ar/${canonical}">
 <meta property="og:locale" content="es_AR">
 <script type="application/ld+json">${schema}</script>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@0.511.0/dist/umd/lucide.min.js"></script>
